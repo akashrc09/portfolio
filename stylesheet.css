@@ -156,6 +156,286 @@ body {
         0 0 100px cyan, 0 0 200px cyan
 }
 
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    align-items: center;
+    gap: 1.5rem;
+    padding: 100px 10% 80px;
+    background: #081b29;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(14, 240, 255, 0.25);
+}
+
+.about-text {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+}
+
+.about-text h2 {
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #d9d9d9;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text .btn-box {
+    animation: none;
+    opacity: 1;
+}
+
+.skills {
+    padding: 100px 10% 80px;
+    background: linear-gradient(180deg, #081b29 0%, #11263d 100%);
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 52px;
+    text-align: center;
+    color: #fff;
+}
+
+.section-heading h2 span {
+    color: #0ef;
+}
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+.badge-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(14, 240, 255, 0.2);
+    border-radius: 18px;
+    padding: 22px 18px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    animation: floatCard 1.4s ease-in-out infinite alternate;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.badge-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.badge-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.badge-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(14, 240, 255, 0.7);
+    box-shadow: 0 0 20px rgba(14, 240, 255, 0.2);
+}
+
+.badge-image {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto 18px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #081b29;
+    position: relative;
+    box-shadow: none;
+    animation: none;
+    overflow: visible;
+    background: transparent;
+}
+
+.badge-image > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.95);
+}
+
+.badge-image > div iframe {
+    border: none;
+    width: 150px !important;
+    height: 270px !important;
+    max-width: 100%;
+}
+
+.badge-image::before {
+    display: none;
+}
+
+.badge-one {
+    background: linear-gradient(135deg, #7cf7ff, #36d1dc);
+}
+
+.badge-two {
+    background: linear-gradient(135deg, #a0f3ff, #0ef);
+}
+
+.badge-three {
+    background: linear-gradient(135deg, #b9f5ff, #5eead4);
+}
+
+.badge-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #fff;
+}
+
+.badge-card p {
+    color: #d2dfe8;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.certificates-block {
+    margin-top: 20px;
+}
+
+.section-heading.small h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 22px;
+}
+
+.cert-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(14, 240, 255, 0.5);
+}
+
+.cert-thumb {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #081b29;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cert-thumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0));
+}
+
+.thumb-one {
+    background: linear-gradient(135deg, #ffdd57, #ffb703);
+}
+
+.thumb-two {
+    background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+}
+
+.thumb-three {
+    background: linear-gradient(135deg, #a8ff78, #00c2a8);
+}
+
+.cert-info {
+    padding: 18px 14px 20px;
+}
+
+.cert-info h4 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.cert-info a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(14, 240, 255, 0.12);
+    color: #0ef;
+    text-decoration: none;
+    border: 1px solid rgba(14, 240, 255, 0.5);
+    transition: all 0.25s ease;
+}
+
+.cert-info a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 15px rgba(14, 240, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        padding-top: 80px;
+    }
+
+    .about-text h2 {
+        font-size: 42px;
+    }
+
+    .badge-grid,
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+}
 
 @keyframes slideRight {
     0% {
@@ -203,5 +483,25 @@ body {
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes floatCard {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes badgePulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 12px rgba(14, 240, 255, 0.38);
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(14, 240, 255, 0.7);
     }
 }
