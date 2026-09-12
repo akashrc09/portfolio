@@ -5,8 +5,24 @@
     font-family: 'poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 body {
     color: #ededed;
+    background: #050f17;
+    overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 .header {
@@ -28,10 +44,29 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
     opacity: 0;
     animation: slideRight 1s ease forwards;
 
+}
+
+.logo span {
+    color: #0ef;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.header.scrolled {
+    background: rgba(7, 21, 33, 0.92);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(14px);
 }
 
 .navbar a {
@@ -310,12 +345,17 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
     overflow: hidden;
-    opacity: 0;
-    transform: translateX(42px);
+    opacity: 1;
+    transform: translateX(0);
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.cert-card.is-visible {
+.js .cert-card {
+    opacity: 0;
+    transform: translateX(42px);
+}
+
+.js .cert-card.is-visible {
     animation: certificateReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -403,25 +443,6 @@ body {
     position: relative;
 }
 
-.cert-pdf canvas {
-    width: 100%;
-    height: 100%;
-    min-height: 190px;
-    object-fit: contain;
-    position: relative;
-    z-index: 1;
-}
-
-.cert-pdf span {
-    position: absolute;
-    z-index: 2;
-    padding: 6px 10px;
-    border-radius: 6px;
-    background: rgba(8, 27, 41, 0.8);
-    color: #fff;
-    font-size: 14px;
-}
-
 .cert-info {
     padding: 24px 28px;
 }
@@ -471,6 +492,100 @@ body {
     overflow: hidden;
     padding: 100px 10% 110px;
     background: #071521;
+}
+
+.services,
+.contact {
+    padding: 100px 10%;
+    background: #081b29;
+}
+
+.services {
+    background: linear-gradient(135deg, #0b2638, #102b3e);
+}
+
+.contact-panel {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 36px 42px;
+    border: 1px solid rgba(14, 240, 255, 0.25);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.contact-panel p {
+    max-width: 700px;
+    color: #d9d9d9;
+    line-height: 1.7;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.service-card {
+    padding: 30px 26px;
+    border: 1px solid rgba(14, 240, 255, 0.2);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(14, 240, 255, 0.7);
+    box-shadow: 0 0 24px rgba(14, 240, 255, 0.12);
+}
+
+.service-card > i {
+    color: #0ef;
+    font-size: 34px;
+}
+
+.service-card h3 {
+    margin: 18px 0 12px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.service-card p {
+    color: #d9d9d9;
+    line-height: 1.7;
+}
+
+.contact {
+    background: #071521;
+}
+
+.contact-panel {
+    text-align: center;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    padding: 22px 6%;
+    color: #8fa8b6;
+    background: #050f17;
+    font-size: 13px;
+    text-align: center;
 }
 
 .courses::before {
@@ -601,6 +716,13 @@ body {
     box-shadow: 0 0 18px rgba(14, 240, 255, 0.7);
 }
 
+.course-note {
+    margin-top: 24px;
+    color: #9cb4c2;
+    font-size: 14px;
+    text-align: center;
+}
+
 @media (max-width: 700px) {
     .cert-card {
         grid-template-columns: 1fr;
@@ -630,6 +752,53 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 18px 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 2;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 6%;
+        right: 6%;
+        display: grid;
+        padding: 12px;
+        border: 1px solid rgba(14, 240, 255, 0.2);
+        background: rgba(7, 21, 33, 0.98);
+        transform: translateY(-12px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-open .navbar {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navbar a {
+        margin: 0;
+        padding: 12px 14px;
+        font-size: 16px;
+        opacity: 1;
+        animation: none;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .contact {
+        padding: 80px 6%;
+    }
+
     .about {
         grid-template-columns: 1fr;
         padding-top: 80px;
