@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>It's Akash</title>
+    <title>Akash Roy Chowdhury | Digital Forensics & OSINT</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script defer src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo"> </a>
+        <a href="#home" class="logo" aria-label="Akash Roy Chowdhury home">AKASH<span>.</span></a>
 
-        <nav class="navbar">
-            <a href="#" style="--i:1"class="active" >Home</a>
-            <a href="#about" style="--i:2" >About</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation">
+            <i class='bx bx-menu' aria-hidden="true"></i>
+        </button>
+
+        <nav class="navbar" id="site-navigation" aria-label="Main navigation">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
             <a href="#skills" style="--i:3">Skills</a>
-            <a href="#Payments" style="--i:4">Payments</a>
-            <a href="#Courses" style="--i:5">Courses</a>
+            <a href="#services" style="--i:4">Services</a>
+            <a href="#courses" style="--i:5">Courses</a>
         </nav>
     </header>
-    <section class="home">
+    <main>
+    <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
             <h1>Akash Roy Chowdhury</h1>
@@ -30,7 +35,7 @@
                 <br>Certified in OSINT, OPSEC, Cybersecurity, Iot Security & IT Forensic <br>Diploma Holder in Digital Forensic Investigations and much more....</p>
             <div class="home-sci">
                 <a href="https://www.instagram.com/akashrc0" style="--i:8"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="#contact" style="--i:9" aria-label="Contact Akash"><i class='bx bx-envelope' aria-hidden="true"></i></a>
             </div>
             <a href="#about" class="btn-box">More About Me</a>
             </div>
@@ -53,7 +58,7 @@
                 My expertise includes OSINT, OPSEC, IoT security, IT forensic investigations, and digital evidence handling.
                 I enjoy learning, sharing technical knowledge, and building practical solutions in the cybersecurity space.
             </p>
-            <a href="#" class="btn-box">Read More</a>
+            <a href="#skills" class="btn-box">Explore Credentials</a>
         </div>
     </section>
 
@@ -69,91 +74,91 @@
 
             <div class="cert-list">
                 <article class="cert-card">
-                    <a class="cert-visual cert-image" href="Diploma%20in%20digital%20foriencics%20investigations.jpg" target="_blank" rel="noopener">
-                        <img src="Diploma%20in%20digital%20foriencics%20investigations.jpg" alt="Diploma in Digital Forensics Investigations certificate">
+                    <a class="cert-visual cert-image" href="webp/Diploma%20in%20digital%20foriencics%20investigations.jpg" target="_blank" rel="noopener">
+                        <img src="webp/Diploma%20in%20digital%20foriencics%20investigations.jpg" alt="Diploma in Digital Forensics Investigations certificate">
                     </a>
                     <div class="cert-info">
                         <p class="cert-type">Diploma</p>
                         <h4>Digital Forensics Investigations</h4>
                         <p>Diploma focused on digital Forensic investigation methods, evidence handling, and investigative reporting.</p>
-                        <a class="cert-link" href="Diploma%20in%20digital%20foriencics%20investigations.jpg" target="_blank" rel="noopener">View Certificate</a>
+                        <a class="cert-link" href="webp/Diploma%20in%20digital%20foriencics%20investigations.jpg" target="_blank" rel="noopener">View Certificate</a>
                     </div>
                 </article>
 
                 <article class="cert-card">
-                    <a class="cert-visual cert-pdf" href="OSINT%20by%20Basel%20Institute%20of%20Governence.pdf" data-pdf="OSINT%20by%20Basel%20Institute%20of%20Governence.pdf" target="_blank" rel="noopener"><span>PDF</span></a>
+                    <a class="cert-visual cert-image" href="PDFs/OSINT%20by%20Basel%20Institute%20of%20Governence.pdf" target="_blank" rel="noopener"><img src="webp/OSINT-by-Basel-Institute-of-Governence.webp" alt="OSINT certificate preview"></a>
                     <div class="cert-info">
                         <p class="cert-type">OSINT</p>
                         <h4>OSINT</h4>
                         <p>Training from the Basel Institute on using open-source intelligence in research and investigations.</p>
-                        <a class="cert-link" href="OSINT%20by%20Basel%20Institute%20of%20Governence.pdf" target="_blank" rel="noopener">View Certificate</a>
+                        <a class="cert-link" href="PDFs/OSINT%20by%20Basel%20Institute%20of%20Governence.pdf" target="_blank" rel="noopener">View Certificate</a>
                     </div>
                 </article>
 
                 <article class="cert-card">
-                    <a class="cert-visual cert-pdf" href="OPSEC%20Awareness%20for%20Military%20Members,%20DOD%20Employees,%20and%20Contractors.pdf" data-pdf="OPSEC%20Awareness%20for%20Military%20Members,%20DOD%20Employees,%20and%20Contractors.pdf" target="_blank" rel="noopener"><span>PDF</span></a>
+                    <a class="cert-visual cert-image" href="PDFs/OPSEC%20Awareness%20for%20Military%20Members,%20DOD%20Employees,%20and%20Contractors.pdf" target="_blank" rel="noopener"><img src="webp/OPSEC-Awareness-for-Military-Members_-DOD-Employees_-and-Contractors.webp" alt="OPSEC Awareness certificate preview"></a>
                     <div class="cert-info">
                         <p class="cert-type">OPSEC</p>
                         <h4>OPSEC Awareness</h4>
                         <p>Certificate covering operational security awareness for protecting sensitive information and reducing exposure.</p>
-                        <a class="cert-link" href="OPSEC%20Awareness%20for%20Military%20Members,%20DOD%20Employees,%20and%20Contractors.pdf" target="_blank" rel="noopener">View Certificate</a>
+                        <a class="cert-link" href="PDFs/OPSEC%20Awareness%20for%20Military%20Members,%20DOD%20Employees,%20and%20Contractors.pdf" target="_blank" rel="noopener">View Certificate</a>
                     </div>
                 </article>
 
                 <article class="cert-card">
-                    <a class="cert-visual cert-pdf" href="ITnsdc.pdf" data-pdf="ITnsdc.pdf" target="_blank" rel="noopener"><span>PDF</span></a>
+                    <a class="cert-visual cert-image" href="PDFs/ITnsdc.pdf" target="_blank" rel="noopener"><img src="webp/IT-nsdc.webp" alt="Information Technology certificate preview"></a>
                     <div class="cert-info">
                         <p class="cert-type">Information Technology</p>
                         <h4>Information Technology</h4>
                         <p>Certification demonstrating foundational knowledge across information technology concepts and practice.</p>
-                        <a class="cert-link" href="ITnsdc.pdf" target="_blank" rel="noopener">View Certificate</a>
+                        <a class="cert-link" href="PDFs/ITnsdc.pdf" target="_blank" rel="noopener">View Certificate</a>
                     </div>
                 </article>
 
                 <article class="cert-card">
-                    <a class="cert-visual cert-pdf" href="IoT%20nsdc.pdf" data-pdf="IoT%20nsdc.pdf" target="_blank" rel="noopener"><span>PDF</span></a>
+                    <a class="cert-visual cert-image" href="PDFs/IoT%20nsdc.pdf" target="_blank" rel="noopener"><img src="webp/IoT%20nsdc.webp" alt="Internet of Things certificate preview"></a>
                     <div class="cert-info">
                         <p class="cert-type">IoT Security</p>
                         <h4>Internet of Things</h4>
                         <p>Certificate covering Internet of Things fundamentals, connected devices, and related security considerations.</p>
-                        <a class="cert-link" href="IoT%20nsdc.pdf" target="_blank" rel="noopener">View Certificate</a>
+                        <a class="cert-link" href="PDFs/IoT%20nsdc.pdf" target="_blank" rel="noopener">View Certificate</a>
                     </div>
                 </article>
 
                 <article class="cert-card">
-                    <a class="cert-visual cert-pdf" href="IntrotoModernAI%20cisco.pdf" data-pdf="IntrotoModernAI%20cisco.pdf" target="_blank" rel="noopener"><span>PDF</span></a>
+                    <a class="cert-visual cert-image" href="PDFs/IntrotoModernAI%20cisco.pdf" target="_blank" rel="noopener"><img src="webp/IntrotoModernAI-cisco.webp" alt="Introduction to Modern AI certificate preview"></a>
                     <div class="cert-info">
                         <p class="cert-type">Artificial Intelligence</p>
                         <h4>Introduction to Modern AI</h4>
                         <p>Introduction to modern artificial intelligence concepts, applications, and the role of AI in technology.</p>
-                        <a class="cert-link" href="IntrotoModernAI%20cisco.pdf" target="_blank" rel="noopener">View Certificate</a>
+                        <a class="cert-link" href="PDFs/IntrotoModernAI%20cisco.pdf" target="_blank" rel="noopener">View Certificate</a>
                     </div>
                 </article>
 
                 <article class="cert-card">
-                    <a class="cert-visual cert-pdf" href="Cybersecurity%20intro%20by%20cisco.pdf" data-pdf="Cybersecurity%20intro%20by%20cisco.pdf" target="_blank" rel="noopener"><span>PDF</span></a>
+                    <a class="cert-visual cert-image" href="PDFs/Cybernosecurity%20intro%20by%20cisco.pdf" target="_blank" rel="noopener"><img src="webp/Cybersecurity-intro-by-cisco.webp" alt="Introduction to Cybersecurity certificate preview"></a>
                     <div class="cert-info">
                         <p class="cert-type">Cybersecurity</p>
                         <h4>Introduction to Cybersecurity</h4>
                         <p>Certificate introducing core cybersecurity principles, digital threats, and practical security awareness.</p>
-                        <a class="cert-link" href="Cybersecurity%20intro%20by%20cisco.pdf" target="_blank" rel="noopener">View Certificate</a>
+                        <a class="cert-link" href="PDFs/Cybersecurity%20intro%20by%20cisco.pdf" target="_blank" rel="noopener">View Certificate</a>
                     </div>
                 </article>
 
                 <article class="cert-card">
-                    <a class="cert-visual cert-pdf" href="ComputerHardwareBasicsUpdate20260608-32-3i7uzk%20by%20cisco.pdf" data-pdf="ComputerHardwareBasicsUpdate20260608-32-3i7uzk by cisco.pdf" target="_blank" rel="noopener"><span>PDF</span></a>
+                    <a class="cert-visual cert-image" href="PDFs/ComputerHardwareBasicsUpdate20260608-32-3i7uzk%20by%20cisco.pdf" target="_blank" rel="noopener"><img src="webp/ComputerHardwareBasicsUpdate20260608-32-3i7uzk-by-cisco.webp" alt="Computer Hardware Basics certificate preview"></a>
                     <div class="cert-info">
                         <p class="cert-type">Hardware</p>
                         <h4>Computer Hardware Basics</h4>
                         <p>Certification covering computer components, hardware fundamentals, and the basics of system configuration.</p>
-                        <a class="cert-link" href="ComputerHardwareBasicsUpdate20260608-32-3i7uzk%20by%20cisco.pdf" target="_blank" rel="noopener">View Certificate</a>
+                        <a class="cert-link" href="PDFs/ComputerHardwareBasicsUpdate20260608-32-3i7uzk%20by%20cisco.pdf" target="_blank" rel="noopener">View Certificate</a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <section class="courses" id="Courses">
+    <section class="courses" id="courses">
         <div class="section-heading">
             <h2>My <span>Courses</span></h2>
         </div>
@@ -169,7 +174,7 @@
                         <span><strong>42</strong> Hours</span>
                         <span><strong>₹2,999</strong> INR</span>
                     </div>
-                    <a href="#" class="course-link">Enroll Now <span aria-hidden="true">→</span></a>
+                    <a href="https://www.instagram.com/akashrc0" class="course-link" target="_blank" rel="noopener">Enroll Now* <span aria-hidden="true">→</span></a>
                 </div>
             </article>
 
@@ -183,12 +188,51 @@
                         <span><strong>20</strong> Hours</span>
                         <span><strong>₹1,999</strong> INR</span>
                     </div>
-                    <a href="#" class="course-link">Enroll Now <span aria-hidden="true">→</span></a>
+                    <a href="https://www.instagram.com/akashrc0" class="course-link" target="_blank" rel="noopener">Enroll Now* <span aria-hidden="true">→</span></a>
                 </div>
+            </article>
+        </div>
+        <p class="course-note">* Enrollment is available by sending a DM on Instagram.</p>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-heading">
+            <h2>My <span>Services</span></h2>
+        </div>
+        <div class="service-list">
+            <article class="service-card">
+                <i class='bx bx-search-alt-2' aria-hidden="true"></i>
+                <h3>OSINT Research</h3>
+                <p>Structured open-source research, source evaluation, and information discovery for clear, responsible investigations.</p>
+            </article>
+            <article class="service-card">
+                <i class='bx bx-shield-quarter' aria-hidden="true"></i>
+                <h3>Digital Forensics</h3>
+                <p>Practical support for digital evidence handling, investigative workflows, and forensic documentation.</p>
+            </article>
+            <article class="service-card">
+                <i class='bx bx-lock-alt' aria-hidden="true"></i>
+                <h3>OPSEC Guidance</h3>
+                <p>Security awareness guidance to reduce digital exposure and protect sensitive personal or organizational information.</p>
             </article>
         </div>
     </section>
 
-   <script src="main.js" defer></script>
+    <section class="contact" id="contact">
+        <div class="section-heading">
+            <h2>Let's <span>Connect</span></h2>
+        </div>
+        <div class="contact-panel">
+            <p>For research collaborations, training questions, or digital forensics discussions, reach out through Instagram.</p>
+            <a class="contact-link" href="https://www.instagram.com/akashrc0" target="_blank" rel="noopener">@akashrc0 <span aria-hidden="true">↗</span></a>
+        </div>
+    </section>
+    </main>
+
+    <div class="copyright" aria-label="Copyright notice">
+        &copy; 2026 Akash Roy Chowdhury. All rights reserved.
+    </div>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
