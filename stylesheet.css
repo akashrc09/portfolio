@@ -52,6 +52,13 @@ body {
 
 .logo span {
     color: #0ef;
+    animation: logoDotBlink 1s steps(2, start) infinite;
+}
+
+@keyframes logoDotBlink {
+    to {
+        visibility: hidden;
+    }
 }
 
 .menu-toggle {
@@ -521,13 +528,15 @@ body {
 
 .service-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
     gap: 22px;
     max-width: 1080px;
     margin: 0 auto;
 }
 
 .service-card {
+    display: flex;
+    flex-direction: column;
     padding: 30px 26px;
     border: 1px solid rgba(14, 240, 255, 0.2);
     border-radius: 14px;
@@ -555,6 +564,48 @@ body {
 .service-card p {
     color: #d9d9d9;
     line-height: 1.7;
+}
+
+.service-card .service-price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding: 14px 16px;
+    border: 1px solid rgba(14, 240, 255, 0.18);
+    border-radius: 10px;
+    background: rgba(14, 240, 255, 0.06);
+}
+
+.price-label {
+    color: #a9c4d2;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.service-price p {
+    max-width: 100%;
+    color: #0ef;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.price-currency {
+    font-size: 18px;
+}
+
+.price-unit {
+    margin-left: 3px;
+    color: #a9c4d2;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
 }
 
 .contact {
@@ -915,4 +966,3 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
-
