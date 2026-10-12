@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -40,6 +40,9 @@ body {
 
 .logo {
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
     font-size: 25px;
     color: #fff;
     text-decoration: none;
@@ -50,14 +53,23 @@ body {
 
 }
 
+.logo-mark {
+    width: 38px;
+    height: 38px;
+}
+
 .logo span {
     color: #0ef;
-    animation: logoDotBlink 1s steps(2, start) infinite;
+    animation: logoDotBlink 1s steps(1, end) infinite;
 }
 
 @keyframes logoDotBlink {
-    to {
-        visibility: hidden;
+    0%, 49% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
     }
 }
 
