@@ -26,14 +26,49 @@ window.addEventListener("scroll", function () {
     header.classList.toggle("scrolled", window.scrollY > 24);
 }, { passive: true });
 
-if (window.Typed) {
-    new Typed(".text", {
-        strings: ["Digital Forensic Analyst", "OSINT Researcher", "OPSEC Advisor", "PCB Designer", "Electronics Enthusiast"],
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 1000,
-        loop: true
-    });
+var typedElement = document.querySelector(".text");
+var roles = ["Digital Forensic Analyst", "OSINT Researcher", "OPSEC Advisor", "PCB Designer", "Electronics Enthusiast"];
+
+if (typedElement) {
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion) {
+        typedElement.textContent = roles[0];
+    } else {
+        var roleIndex = 0;
+        var characterIndex = roles[0].length;
+        var deleting = true;
+
+        function animateRole() {
+            if (deleting) {
+                characterIndex -= 1;
+                typedElement.textContent = roles[roleIndex].slice(0, characterIndex);
+
+                if (characterIndex === 0) {
+                    deleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    window.setTimeout(animateRole, 400);
+                    return;
+                }
+
+                window.setTimeout(animateRole, 100);
+                return;
+            }
+
+            characterIndex += 1;
+            typedElement.textContent = roles[roleIndex].slice(0, characterIndex);
+
+            if (characterIndex === roles[roleIndex].length) {
+                deleting = true;
+                window.setTimeout(animateRole, 1000);
+                return;
+            }
+
+            window.setTimeout(animateRole, 100);
+        }
+
+        window.setTimeout(animateRole, 1000);
+    }
 }
 
 var certificateCards = document.querySelectorAll(".cert-card");
